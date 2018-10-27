@@ -1,0 +1,25 @@
+---
+layout: page
+title: Downloads
+permalink: /downloads/
+---
+
+<p>
+  We have Torrent and Direct links for ROM downloads. We recommend you to use Torrent links, it saves us bandwidth (and therefore money).
+</p>
+
+
+<ul id="downloads">
+  {% for file in site.downloads %}
+    <li class="download">{{ file.name }} (for device <strong>{{ file.device }}</strong>)
+      <ul>
+        <li class="magnet_link">
+          <a href="{{ file.magnet_link }}">torrent link (RECOMMENDED, faster)</a>
+        </li>
+        <li class="direct_link">
+          <a href="{{ file.download_link }}">direct download (slower)</a>
+        </li>
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
